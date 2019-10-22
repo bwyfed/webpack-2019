@@ -12,6 +12,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
   },
+  devServer: {
+    contentBase: './dist',
+    open: true,
+    port: 8080, // 默认端口号8080
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  },
   module: {
     rules: [{
       test: /\.(jpg|png|gif)$/,
