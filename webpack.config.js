@@ -3,6 +3,21 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const webpack = require('webpack')
 
+// 'presets': [
+  //   [
+  //     '@babel/preset-env',
+  //     {
+  //       targets: {
+  //         edge: '17',
+  //         firefox: '60',
+  //         chrome: '67',
+  //         safari: '11.1'
+  //       },
+  //       useBuiltIns: 'usage',
+  //       corejs: 3
+  //     }
+  //   ]
+  // ]
 module.exports = {
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
@@ -27,24 +42,7 @@ module.exports = {
     rules: [{
       test: /\.js$/,
       exclude: /node_modules/,
-      loader: 'babel-loader',
-      options: {
-        'presets': [
-          [
-            '@babel/preset-env',
-            {
-              targets: {
-                edge: '17',
-                firefox: '60',
-                chrome: '67',
-                safari: '11.1'
-              },
-              useBuiltIns: 'usage',
-              corejs: 3
-            }
-          ]
-        ]
-      }
+      loader: 'babel-loader'
     }, {
       test: /\.(jpg|png|gif)$/,
       use: {
