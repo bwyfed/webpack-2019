@@ -17,7 +17,7 @@ module.exports = {
     ],
     '@babel/preset-react'
   ]
-  // 打包类库使用plugin
+  // 打包类库使用plugins
   // "plugins": [
   //   [
   //     "@babel/plugin-transform-runtime",
