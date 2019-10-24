@@ -1,10 +1,5 @@
-import React, { Component } from 'react'
-import ReactDom from 'react-dom'
+// Tree Shaking只支持 ES module的引入
 
-class App extends Component {
-  render() {
-    return <div>Hello World</div>
-  }
-}
+import { add } from './math'
 
-ReactDom.render(<App />, document.getElementById('root'))
+add(1,2)
