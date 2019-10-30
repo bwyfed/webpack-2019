@@ -59,10 +59,14 @@ module.exports = {
       template: 'src/index.html'
     }),
     new CleanWebpackPlugin()
-  ]
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all'
-  //   }
-  // }
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        vendors: false,
+        default: false
+      }
+    }
+  }
 }

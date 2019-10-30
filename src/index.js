@@ -28,7 +28,7 @@
 
 // 第三种方式：使用异步方式引入模块
 function getComponent() {
-  return import('lodash').then((_) => {
+  return import(/* webpackChunkName:"lodash" */'lodash').then((_) => {
     var element = document.createElement('div')
     element.innerHTML = _.join(['Dell', 'Lee'], '-')
     return element

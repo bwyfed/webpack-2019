@@ -17,6 +17,7 @@ module.exports = {
     ],
     '@babel/preset-react'
   ]
+  // plugins: ["@babel/plugin-syntax-dynamic-import"]
   // 打包类库使用plugins
   // "plugins": [
   //   [
