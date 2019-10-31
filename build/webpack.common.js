@@ -62,10 +62,27 @@ module.exports = {
   ],
   optimization: {
     splitChunks: {
-      chunks: 'all',
+      chunks: 'initial', // all, async, initial
+      minSize: 30000,
+      maxSize: 0,
+      minChunks: 1,
+      maxAsyncRequests: 5,
+      maxInitialRequests: 3,
+      automaticNameDelimiter: '~',
+      automaticNameMaxLength: 30,
+      name: true,
       cacheGroups: {
-        vendors: false,
-        default: false
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          priority: -10,
+          // 加上这里后会报错
+          filename: 'mychunk.js'
+        },
+        default: {
+          minChunks: 2,
+          priority: -20,
+          reuseExistingChunk: true
+        }
       }
     }
   }
