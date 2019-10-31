@@ -1,3 +1,3 @@
-import _ from "lodash"
-
-export default _.join(['a', 'lib'], '***')
+import('lodash')
+const a = 'I am a.js'
+export default a
