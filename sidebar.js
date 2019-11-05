@@ -5,4 +5,7 @@ function Sidebar() {
   dom.append(sidebar)
 }
 
-export default Sidebar
+// ES Module 导出
+// export default Sidebar
+// CommonJS导出
+module.exports = Sidebar

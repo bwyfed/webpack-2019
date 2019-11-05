@@ -5,4 +5,7 @@ function Header() {
   dom.append(header)
 }
 
-export default Header
+// ES Module 导出
+// export default Header
+// CommonJS导出
+module.exports = Header

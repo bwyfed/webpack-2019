@@ -5,4 +5,7 @@ function Content() {
   dom.append(content)
 }
 
-export default Content
+// ES Module 导出
+// export default Content
+// CommonJS导出
+module.exports = Content
