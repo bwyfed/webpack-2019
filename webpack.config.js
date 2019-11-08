@@ -5,13 +5,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/index.js',
-    sub: './src/index.js'
+    main: './src/index.js'
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
-    publicPath: 'http://cdn.com.cn'
+    filename: 'bundle.js',
+    // publicPath: 'http://cdn.com.cn'
   },
   module: {
     rules: [{
@@ -19,6 +18,7 @@ module.exports = {
       use: {
         loader: 'url-loader',
         options: {
+          // placeholder 占位符
           name: '[name]_[hash].[ext]',
           outputPath: 'images/',
           limit: 10240
