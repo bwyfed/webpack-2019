@@ -31,10 +31,22 @@ module.exports = {
       test: /\.scss$/,
       use: [
         'style-loader',
-        'css-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 2,
+            // 如果是引入字体文件，则不需要CSS module
+            // modules: true // 增加CSS module的功能
+          }
+        },
         'sass-loader',
         'postcss-loader'
       ]
+    }, {
+      test: /\.(eot|ttf|woff2?|svg)$/,
+      use: {
+      loader: 'file-loader'
+      }
     }]
   }
 }
