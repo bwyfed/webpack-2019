@@ -1,6 +1,4 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
   mode: 'development',
@@ -9,8 +7,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
-    // publicPath: 'http://cdn.com.cn'
+    filename: 'bundle.js'
   },
   module: {
     rules: [{
@@ -25,30 +22,19 @@ module.exports = {
         }
       }
     }, {
-      test: /\.(eot|ttf|woff|svg)$/,
-      use: {
-        loader: 'file-loader'
-      }
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        'css-loader'
+      ]
     }, {
       test: /\.scss$/,
       use: [
         'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            importLoaders: 2,
-            modules: false
-          }
-        },
+        'css-loader',
         'sass-loader',
         'postcss-loader'
       ]
     }]
-  },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: 'src/index.html'
-    }),
-    new CleanWebpackPlugin()
-  ]
+  }
 }
