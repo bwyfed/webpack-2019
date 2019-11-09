@@ -7,11 +7,16 @@
 // var Header = require('./header.js')
 // var Sidebar = require('./sidebar.js')
 // var Content = require('./content.js')
+// 引入图片文件
+// var avatar = require('./avatar.jpg')
+
+// console.log(avatar)
+
 // new Header()
 // new Sidebar()
 // new Content()
-// var avatar = require('./avatar.jpg')
 
+// 引入图片，并在页面上展示该图片
 // ES Module的语法
 import avatar from './avatar.jpg'
 console.log(avatar)
