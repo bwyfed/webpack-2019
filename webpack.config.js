@@ -34,18 +34,18 @@ module.exports = {
         {
           loader: 'css-loader',
           options: {
-            importLoaders: 2,
-            // 如果是引入字体文件，则不需要CSS module
+            importLoaders: 2, // 通过@import引入的scss文件，也走postcss-loader和sass-loader处理
+            // 如果是引入字体文件，则是全局引入，不需要配置CSS module
             // modules: true // 增加CSS module的功能
           }
         },
-        'sass-loader',
-        'postcss-loader'
+        'postcss-loader',
+        'sass-loader'
       ]
     }, {
       test: /\.(eot|ttf|woff2?|svg)$/,
       use: {
-      loader: 'file-loader'
+        loader: 'file-loader'
       }
     }]
   }

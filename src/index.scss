@@ -1,9 +1,9 @@
-@import './avatar.scss';
+// @import './avatar.scss';
 body {
   .avatar {
     width: 150px;
     height: 150px;
-    transform: translate(100px, 100px);
+    transform: translate(100px, 100px); // 需要用到postcss-loader
   }
 }
 // 以下为字体相关样式

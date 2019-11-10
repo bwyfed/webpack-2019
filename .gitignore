@@ -1,8 +1,9 @@
 node_modules
-dist/bundle.js
-dist/*.jpg
-dist/*.svg
-dist/*.ttf
-dist/*.eot
-dist/*.woff
-dist/*.woff2
+dist/**/*.js
+dist/**/*.jpg
+dist/**/*.svg
+dist/**/*.ttf
+dist/**/*.eot
+dist/**/*.woff
+dist/**/*.woff2
+package-lock.json

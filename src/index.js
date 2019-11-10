@@ -32,7 +32,7 @@
 // img.classList.add('avatar')
 // var root = document.getElementById('root')
 // root.append(img)
-// // 这两张图片的样式是一样的，都是index.scss
+// 这两张图片的样式是一样的，都是index.scss
 
 // 示例4: CSS 模块化
 // import avatar from './avatar.jpg'
@@ -48,6 +48,6 @@
 // root.append(img)
 
 // 示例5：打包字体文件
-import './index.scss'
+import './index.scss' // 此时是全局引入，要将CSS Module功能给关闭掉
 var root = document.getElementById('root')
 root.innerHTML = '<div class="iconfont icon-baozhuang"></div>'
