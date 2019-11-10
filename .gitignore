@@ -1,9 +1,3 @@
 node_modules
-dist/**/*.js
-dist/**/*.jpg
-dist/**/*.svg
-dist/**/*.ttf
-dist/**/*.eot
-dist/**/*.woff
-dist/**/*.woff2
+dist
 package-lock.json
