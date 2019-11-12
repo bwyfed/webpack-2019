@@ -8,6 +8,14 @@ module.exports = {
   entry: {
     main: './src/index.js'
   },
+  devServer: {
+    contentBase: './dist',
+    open: true,
+    port: 8080, // 默认端口号8080
+    proxy: {
+      '/api': 'http://localhost:3000'
+    }
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js'
