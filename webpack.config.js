@@ -1,6 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'development',
@@ -12,6 +13,8 @@ module.exports = {
     contentBase: './dist',
     open: true,
     port: 8080, // 默认端口号8080
+    hot: true, // 开启Hot Module Replacement
+    hotOnly: true, // HMR不生效时，也不让浏览器自动刷新
     proxy: {
       '/api': 'http://localhost:3000'
     }
@@ -36,7 +39,8 @@ module.exports = {
       test: /\.css$/,
       use: [
         'style-loader',
-        'css-loader'
+        'css-loader',
+        'postcss-loader'
       ]
     }, {
       test: /\.scss$/,
@@ -66,6 +70,7 @@ module.exports = {
       template: './src/index.html'
     }),
     // 打包之前运行
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ]
 }
