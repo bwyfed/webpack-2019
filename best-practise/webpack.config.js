@@ -16,7 +16,7 @@ module.exports = {
                   '@babel/preset-env',
                   {
                     targets: {
-                      "chrome": "70"
+                      "ie": "10"
                     },
                     useBuiltIns: 'usage', // 默认false，可选entry，usage
                     corejs: 3, // 添加core-js版本
@@ -24,6 +24,7 @@ module.exports = {
                   }
                 ]
               ],
+              // 好像没有@babel/plugin-transform-runtime，也能达到优化的效果
               "plugins": [
                 [
                   "@babel/plugin-transform-runtime",
