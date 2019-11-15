@@ -1,0 +1,23 @@
+{
+  "name": "best-practise",
+  "version": "1.0.0",
+  "description": "best practise for webpack and babel",
+  "main": "babel.js",
+  "scripts": {
+    "bundle": "webpack"
+  },
+  "author": "BianWY",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.7.2",
+    "core-js": "^3.4.1"
+  }
+}
