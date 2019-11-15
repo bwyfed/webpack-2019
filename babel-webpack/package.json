@@ -1,0 +1,26 @@
+{
+  "name": "babel-webpack",
+  "version": "1.0.0",
+  "description": "Use babel within webpack",
+  "main": "babel.js",
+  "dependencies": {
+    "core-js": "^3.4.1",
+    "regenerator-runtime": "^0.13.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "scripts": {
+    "bundle": "webpack"
+  },
+  "keywords": [
+    "babel",
+    "webpack"
+  ],
+  "author": "BianWY",
+  "license": "ISC"
+}
